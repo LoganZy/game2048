@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "364493131225",
+    "firebase_url": "https://project-4995459579694497815.firebaseio.com",
+    "project_id": "project-4995459579694497815",
+    "storage_bucket": "project-4995459579694497815.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:364493131225:android:ccbabd32f39e752b",
+        "android_client_info": {
+          "package_name": "com.zylaoshi.game.android2048"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "364493131225-0bqkhq88r7ratgtu10d79qk7f6kl7l27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4Q6ROZ8Ex-pPKXtV_JkHpaIIz83AdRos"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
