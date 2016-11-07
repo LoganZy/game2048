@@ -9,8 +9,10 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.zylaoshi.game.android2048.R;
 import com.zylaoshi.game.android2048.view.AnimLayer;
 import com.zylaoshi.game.android2048.view.GameView;
@@ -24,6 +26,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
 	private AnimLayer animLayer = null;
 	private int ScreenWidth;
 	private int ScreenHeight;
+	InterstitialAd mInterstitialAd;
 
 	private static MainActivity mainActivity = null;
 
@@ -58,7 +61,33 @@ public class MainActivity extends Activity implements View.OnClickListener {
 		AdView mAdView = (AdView) findViewById(R.id.adView);
 		AdRequest adRequest = new AdRequest.Builder().build();
 		mAdView.loadAd(adRequest);
+		mInterstitialAd = new InterstitialAd(this);
+		mInterstitialAd.setAdUnitId("ca-app-pub-6391259585693765/5604125536");
+		mInterstitialAd.setAdListener(new AdListener() {
+			@Override
+			public void onAdClosed() {
+				MainActivity.this.finish();
+			}
+		});
 
+		requestNewInterstitial();
+
+	}
+	private void requestNewInterstitial() {
+		AdRequest adRequest = new AdRequest.Builder()
+				.build();
+
+		mInterstitialAd.loadAd(adRequest);
+	}
+	private boolean adisShow = true;
+	@Override
+	public void onBackPressed() {
+		if (adisShow && mInterstitialAd.isLoaded()) {
+			mInterstitialAd.show();
+			adisShow = false;
+			return;
+		}
+		super.onBackPressed();
 	}
 
 	public void clearScore(){
