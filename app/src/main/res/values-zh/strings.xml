@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="score">分数</string>
+    <string name="bestscore">最高分</string>
+    <string name="newgame">重置</string>
     <string name="app_name">2048</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="score">score</string>
-    <string name="bestscore">bestscore</string>
-    <string name="newgame">reset</string>
     <string name="banner_ad_unit_id">ca-app-pub-6391259585693765/4554697939</string>
     <!--ca-app-pub-6391259585693765~4055170335--> 应用ID
     <!--ca-app-pub-6391259585693765/4554697939--> 横幅广告ID
@@ -13,7 +14,5 @@
     <!--Replace with your own ad unit id. -->
     <!--<string name="ad_unit_id">ca-app-pub-6391259585693765/5604125536</string>-->
     <string name="ad_unit_id">ca-app-pub-6391259585693765/5604125536</string>
-
-    <!--ca-app-pub-3940256099942544/1033173712-->
 
 </resources>

@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/btReset"
                 android:layout_marginTop="2dp"
-                android:text="重置"
+                android:text="@string/newgame"
                 android:gravity="center"
                 android:layout_centerHorizontal="true"
                 />
